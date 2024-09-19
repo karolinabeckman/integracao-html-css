@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./../css/estilo.css">
+
+  </head>
+  <body id="exercicio">
+    <div style="user-select: none;">
+      Valor <span>0</span>
+    </div>
+    <script>
+      // IIFE -> Immediately Invoked Function Expression
+
+      (function () {
+        console.log('foi chamado??')
+        function incrementar() {
+          const span = document.querySelector('div > span')
+          const novoValor = +span.innerHTML + 1
+          span.innerHTML = novoValor
+        }
+        const div = document.querySelector('div')
+        div.onclick = incrementar
+      })()
+
+
+    </script>
+  </body>
+</html>

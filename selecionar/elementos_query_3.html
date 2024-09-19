@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/estilo.css">
+  </head>
+  <body id="exercicio">
+    <main>
+      <section>
+        <p>Lista de Aprovados...</p>
+        <ul>
+          <li>Ana</li>
+          <li>Rafael</li>
+          <li>Gustavo</li>
+          <li>Pedro</li>
+        </ul>
+        <p>Lista de Reprovados...</p>
+        <!-- <ul><li>Alex</li><li>Carlos</li><li>Davi</li></ul> Removendo elemento text (retirando os espaços em branco)--> 
+        <ul>
+          <li>Alex</li>
+          <li>Carlos</li>
+          <li>Davi</li>
+        </ul>
+      </section>
+    </main>
+    <script>
+      const primeiros = document.querySelectorAll('main > section li:nth-child(1)')
+      primeiros.forEach(no => no.textContent = `>>>> ${no.textContent} <<<<`)
+
+      const itens = document.querySelectorAll('main > section li')
+      const ultimoItem = itens[itens.length-1]
+      const listaDeReprovados = ultimoItem.parentNode
+      const primeiroItem = listaDeReprovados.firstElementChild
+
+      console.log(listaDeReprovados.childNodes)
+
+      // console.log(listaDeReprovados.firstChild) // -> Pega o primeiro elemento, mesmo que seja uma quebra de linha (#text)
+      console.log(listaDeReprovados.firstElementChild)
+      console.log(listaDeReprovados.lastElementChild)
+
+      console.log(primeiroItem.nextSibling)
+      console.log(primeiroItem.nextElementSibling)
+    </script>
+  </body>
+</html>

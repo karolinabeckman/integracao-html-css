@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <!-- Mesmo colocando defer no script não funciona pois o script está inline, ou seja, dentro do documento-->
+    <script>
+      const semEl = document.getElementById('primeiro')
+      console.log('Sem elemento...', semEl)
+    </script>
+  </head>
+  <body id="exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div id="segundo">#segundo</div>
+    <div id="terceiro">#terceiro</div>
+    <div id="primeiro">não é bom</div>
+    <script>
+      // getElementById só pega a primeira ocorrencia do id
+      const el = document.getElementById('primeiro')
+      console.log('el...', el)
+    </script>
+  </body>
+</html>

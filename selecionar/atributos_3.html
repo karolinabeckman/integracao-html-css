@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/estilo.css">
+  </head>
+  <body id="exercicio">
+    <main class="coluna">
+      <label for="compras">Compras</label>
+      <ul id="compras" destino="escritorio" data-urgencia="5">
+        <li>Café</li>
+        <li>Água</li>
+        <li>Copo descartável</li>
+      </ul>
+    </main>
+
+    <script>
+      const lista = document.querySelector('#compras')
+
+      // somente leitura
+      console.log(lista.attributes)
+      console.log(lista.attributes[0])
+      console.log(lista.attributes.id)
+      console.log(lista.attributes[1])
+      console.log(lista.attributes.destino)
+      console.log(lista.attributes[2])
+      console.log(lista.attributes['data-urgencia'])
+    </script>
+  </body>
+</html>

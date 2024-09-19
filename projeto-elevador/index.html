@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Elevador</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+    <script src="./js/rua.js" defer></script>
+    <script src="./js/predio.js" defer></script>
+  </head>
+  <body>
+    <div class="controles">
+      <div class="mostrador">Térreo</div>
+      <button comando="T">T</button>
+      <button comando="1">1</button>
+      <button comando="2">2</button>
+      <button comando="3">3</button>
+      <button comando="4">4</button>
+      <button comando="5">5</button>
+      <button comando="6">6</button>
+    </div>
+    <div class="calcada" arvores="2">
+      <div class="arvore"></div>
+      <div class="predio">
+        <div class="coluna" andares="6">
+          <!-- Andares e Térreo criados via JS -->
+        </div>
+        <div class="poco"></div>
+        <div class="coluna" andares="6">
+          <!-- Andares e Térreo criados via JS -->
+        </div>
+      </div>
+      <div class="arvore"></div>
+      <!-- As divs de árvores estão sendo feitas no js -->
+    </div>
+    <div class="rua" faixas="15">
+      <!-- As divs de faixas estão sendo criadas no javaScript pela função criarFaixas() -->
+    </div>
+  </body>
+</html>

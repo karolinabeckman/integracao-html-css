@@ -1,0 +1,39 @@
+<html></html>
+  <head>
+    <link rel="stylesheet" href="../css/estilo.css">
+  </head>
+  <body id="exercicio" >
+    <main class="coluna">
+      <p>Parágrafo #01</p>
+      
+      <article>
+        <p>Paragráfo #02</p>
+      </article>
+  
+      <p>Paragráfo #03</p>
+  
+      <article>
+        <p>Paragráfo #04</p>
+      </article>
+  
+      <article>
+        <p>Paragráfo #05</p>
+      </article>
+    </main>
+    <script>
+      // OS paragrágfos que estão fora da tag <article>
+      // 1. Adicionar o texto [Fora] no início do conteúdo
+      // 2. Adicionem a classe 'destaque'
+
+      // const paragrafosFora = document.querySelectorAll('main > p')
+      const paragrafosFora = document.querySelectorAll(':not(article) > p') // -> Resolução do professor
+
+      paragrafosFora.forEach(p => {
+        p.textContent = `[FORA] ${p.textContent}`
+        p.classList.add('destaque') // -> Resolução do professor
+      })
+      // paragrafosFora.forEach(el => el.classList.add('destaque'))
+
+    </script>
+  </body>
+</html>

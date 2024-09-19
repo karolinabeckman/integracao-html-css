@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./../css/estilo.css">
+  </head>
+  <body id="exercicio">
+    <div>
+      <p>Texto Inicial</p>
+    </div>
+    <script>
+      const div = document.querySelector('div')
+      div.innerHTML = 'Texto Alterado' // -> Isso altera a estrutura inteira, ou seja, o paragráfo deixa de existir e todo o conteúdo da div vira o texto
+      // div.outerHTML = 'Texto Alterado' // Substitui tudo, inclusive a propria div, pelo conteúdo 'Texto Alterado'
+
+      div.insertAdjacentHTML('beforebegin', '<p>Antes do início</p>') // coloca o html antes do começo
+      div.insertAdjacentHTML('afterbegin', '<p>Depois do início</p>') // coloca o html depois do começo
+      div.insertAdjacentHTML('beforeend', '<p>Antes do fim</p>') // coloca o html antes do fim
+      div.insertAdjacentHTML('afterend', '<p>Depois do fim</p>') // coloca o html depois do fim
+
+      console.log(div.innerHTML) // -> Mostra a estrutura do html criado
+      console.log(div.innerText) // -> Não se preocupa com a estrutura e mostra somente os textos
+    </script>
+  </body>
+</html>

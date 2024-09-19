@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/estilo.css">
+  </head>
+  <body id="exercicio">
+    <div>
+      <a href="https://www.cod3r.com.br">Cod3r</a>
+    </div>
+    <div id="logo">
+      <img 
+        src="http://files.cod3r.com.br/curso-web/logo-estreita.png" 
+        alt="logo"
+      >
+    </div>
+    <script>
+      // Acessando atributos
+      const img = document.querySelector('img')
+      console.log('src #1', img.getAttribute('src'))
+      console.log('src #2', img.src)
+      console.log('src #3', img['src'])
+      console.log('alt', img['alt'])
+
+      console.log(img instanceof Node)
+      console.log('nodeType', img.nodeType) // ->doc: https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType
+      console.log('nodeName', img.nodeName)
+
+      const link = document.querySelector('a')
+      console.log('href', link.href)
+      console.log('texto', link.firstChild.nodeType)
+      link.firstChild.nodeValue = 'Site da Cod3r'
+
+      link.innerHTML = 'Novo Site da Cod3r'
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<html></html>
+  <head>
+    <link rel="stylesheet" href="./../css/estilo.css">
+  </head>
+  <body id="exercicio">
+    <table>
+      <thead>
+        <tr>
+          <th>Aluno</th>
+          <th>Nota</th>
+        </tr>
+      </thead>
+      <!-- <tbody id="conteudoTabela"> -->
+      <tbody>
+      </tbody>
+    </table>
+    <script>
+      const alunos = [
+        { nome: 'Ana', nota: 8.1 },
+        { nome: 'Bia', nota: 9.3 },
+        { nome: 'Carlos', nota: 7.7 },
+        { nome: 'Daniel', nota: 8.9 },
+        { nome: 'Julia', nota: 8.5 }
+      ]
+      // -> Minha forma de fazer
+      const conteudoTabela = document.querySelector('tbody')
+      // const conteudoTabela = document.querySelector('#conteudoTabela')
+      // const conteudoTabela = document.getElementById('conteudoTabela')
+      alunos.forEach(aluno => conteudoTabela.innerHTML +=`
+        <tr>
+          <td>${aluno.nome}</td>
+          <td>${aluno.nota}</td>
+        </tr>
+      `)
+
+      // // -> Resolução Professor
+      // const tbody = document.querySelector('tbody')
+
+      // alunos.forEach(aluno => {
+      //   const colunaNome = document.createElement('td')
+      //   colunaNome.innerHTML = aluno.nome
+
+      //   const colunaNota = document.createElement('td')
+      //   colunaNota.innerHTML = aluno.nota
+
+      //   const linha = document.createElement('tr')
+      //   linha.appendChild(colunaNome)
+      //   linha.appendChild(colunaNota)
+
+      //   tbody.appendChild(linha)
+      // })
+    </script>
+  </body>
+</html>

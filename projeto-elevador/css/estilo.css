@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* CSS Gerais */
+*, *:before, *:after {
+  /* -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; */
+      box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  height: 100vh;
+  font-family: "VT323", monospace;
+}
+
+/*CSS dos controles*/
+.controles {
+  height: 100px;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.controles .mostrador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #22F522;
+  border: 10px solid #666;
+  height: 100%;
+  width: 200px;
+  border-radius: 8px;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.controles > button {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  font-size: 2rem;
+  border: 6px solid #999;
+  cursor: pointer
+}
+
+.controles > button.destaque {
+  border-color: yellow;
+}
+
+/* CSS da Calçada ====*/
+
+.calcada {
+display: flex;
+flex: 1;
+justify-content: space-around;
+align-items: flex-end;
+}
+
+/* árvore */
+.arvore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arvore::before {
+  content: "";
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: green;
+}
+
+.arvore::after {
+  content: "";
+  width: 20px;
+  height: 100px;
+  background-color: #4B3131;
+}
+
+/* Prédio */
+.predio {
+  display: flex;
+  width: 400px;
+  height: 100%;
+  background-color: #319DA0;
+  gap: 10px;
+}
+
+.coluna {
+  display: flex;
+  flex-direction: column;
+  background-color: #0006;
+  flex: 2;
+}
+
+.andar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 1;
+  border-bottom: 2px solid white;
+}
+
+.porta {
+  display: flex;
+  padding: 2%;
+  align-items: center;
+  background-color: brown;
+  width: 30%;
+  height: 70%;
+  border: 5px solid #FFF6;
+  /* border-bottom: none */
+  border-bottom-width: 0;
+}
+
+.porta::after {
+  content: "";
+  width: 20%;
+  height: 15%;
+  border-radius: 5px;
+  background-color: #FFF9;
+}
+
+.terreo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid transparent;
+}
+
+.janela {
+  background-color: #068888;
+  border: 5px solid #FFFC;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 40%;
+}
+
+.janela::after {
+  content: "";
+  position: absolute;
+  border:1px solid #FFFC;
+  top: 0;
+  height: 100%;
+  width: 1px;
+}
+
+.janela::before {
+  content: "";
+  position: absolute;
+  border:1px solid #FFFC;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+
+/* Elevador */
+.poco {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: #FFF9;
+  flex: 1;
+}
+
+.elevador {
+  position: absolute;
+  background-color: #FFFA;
+  border:3px solid black;
+  border-top-width: 10px;
+  width: 80%;
+  height: 100px;
+  bottom: 0;
+}
+
+/*CSS rua*/
+
+.rua {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  background-color: grey; 
+  gap: 30px;
+  border-top: 10px solid white;
+}
+
+.rua > .faixa {
+  flex: 1;
+  height: 10px;
+  background-color: #DDD;
+}

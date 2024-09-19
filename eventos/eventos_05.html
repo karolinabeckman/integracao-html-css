@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./../css/estilo.css">
+
+  </head>
+  <body id="exercicio">
+    <main class="coluna">
+      <h1>Formulário</h1>
+
+      <form class="coluna">
+        <input type="text" name="q" placeholder="Digite o termo...">
+        <select name="hl">
+          <option value="pt-br">Português (Brasil)</option>
+          <option value="en-us">Inglês (EUA)</option>
+        </select>
+        <button web-submit>Pesquisar</button>
+      </form>
+    </main>
+    <script>
+      function submeter(evento) {
+        evento.preventDefault()
+        
+        const formulario = evento.target
+        // const formulario = evento.target.parentNode
+        const dados = new FormData(formulario)
+        dados.append('seguro', true)
+
+        console.log(dados.get('q'))
+        console.log(dados.has('hl'))
+        console.log(dados.get('seguro'))
+
+        for(let dado of dados) {
+          console.log(dado)
+        }
+        window.location.href = `https://google.com/search?q=${dados.get('q')}&hl${dados.get('hl')}`
+      }
+
+      // const botoes = document.querySelectorAll('[web-submit]')
+      // botoes.forEach(el => el.onclick = submeter)
+      const formulario = document.forms[0]
+      formulario.onsubmit = submeter
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/estilo.css">
+  </head>
+  <body id="exercicio">
+    <main class="coluna">
+      <label for="compras">Compras</label>
+      <ul id="compras" destino="escritorio" data-urgencia="5">
+        <li>Café</li>
+        <li>Água</li>
+        <li>Copo descartável</li>
+      </ul>
+    </main>
+
+    <script>
+      const lista = document.querySelector('main ul[destino="escritorio"]')
+      console.log('childNodes', lista.childNodes)
+      console.log('destino #1', lista.destino) // -> Não consegue acessar assim, o resultado dá undefined
+      console.log('destino #2', lista.getAttribute('destino'))
+      console.log('destino #2', lista.hasAttribute('destino'))
+
+      lista.setAttribute('destino', 'empresa')
+      lista.setAttribute('status', 'aberto')
+      lista.removeAttribute('destino')
+
+      console.log(lista.dataset.urgencia) // -> dataset é um conjunto de dados para propriedades personalizadas que começam com o prefixo 'data-'
+      lista.dataset.urgencia = 9
+
+      console.log('data-urgencia #1', lista.getAttribute('data-urgencia'))
+      console.log('data-urgencia #2', lista['data-urgencia']) // -> Retorna undefined
+
+      // cuidado!!!
+      const label = document.querySelector('label')
+      console.log('for #1', label.htmlFor) // Como for é uma palavra reservada no javaScript, trocou-se o nome para label.htmlFor
+      console.log('for #2', label.getAttribute('for'))
+      console.log('for #2', label.getAttribute('htmlFor')) // Não funciona -> null
+    </script>
+  </body>
+</html>
